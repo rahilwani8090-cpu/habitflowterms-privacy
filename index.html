@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FF6B6B" />
+  <title>HabitFlow</title>
+  <style>
+    :root {
+      --bg: #FFF8F2;
+      --surface: #FFFFFF;
+      --text: #1F1B17;
+      --muted: #6B6963;
+      --primary: #FF6B6B;
+      --secondary: #FFB36B;
+      --tertiary: #24C58F;
+      --accent: #A670FF;
+      --border: rgba(0, 0, 0, 0.08);
+      --shadow: rgba(0, 0, 0, 0.07);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14110F;
+        --surface: #1F1B17;
+        --text: #FAFAFA;
+        --muted: #B5B1AA;
+        --border: rgba(255, 255, 255, 0.10);
+        --shadow: rgba(0, 0, 0, 0.5);
+      }
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px 18px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .card {
+      max-width: 460px;
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 32px 26px 26px;
+      text-align: center;
+      box-shadow: 0 14px 40px var(--shadow);
+    }
+    .logo {
+      width: 88px; height: 88px;
+      border-radius: 28px;
+      margin: 0 auto 18px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary), var(--tertiary));
+      color: #fff;
+      font-size: 42px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 12px 32px var(--shadow);
+      letter-spacing: -1px;
+    }
+    h1 {
+      font-size: 26px; margin: 4px 0 4px; font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+    .tag {
+      font-size: 13px; color: var(--muted); margin: 0 0 22px;
+      letter-spacing: 0.4px;
+    }
+    .link {
+      display: block;
+      padding: 16px 18px;
+      margin: 10px 0;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff !important;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 8px 22px var(--shadow);
+      transition: transform .15s ease;
+    }
+    .link.alt {
+      background: linear-gradient(135deg, var(--secondary), var(--accent));
+    }
+    .link:active { transform: scale(0.98); }
+    .footer {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+    .footer .by { font-size: 11px; letter-spacing: 2.5px; color: var(--muted); font-weight: 800; }
+    .footer .studio {
+      font-weight: 800; font-size: 18px; letter-spacing: 3px;
+      background: linear-gradient(135deg, var(--primary), var(--tertiary));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      margin-top: 2px;
+    }
+    .footer .copy { font-size: 12px; color: var(--muted); margin-top: 8px; }
+    .footer a { color: var(--primary); text-decoration: none; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">H</div>
+    <h1>HabitFlow</h1>
+    <p class="tag">Stay in the flow.</p>
+    <a class="link" href="privacypolicy.html">Privacy Policy</a>
+    <a class="link alt" href="terms.html">Terms &amp; Conditions</a>
+    <a class="link" href="delete.html">Delete Your Account</a>
+    <div class="footer">
+      <div class="by">DEVELOPED BY</div>
+      <div class="studio">SDX STUDIO</div>
+      <div class="copy">
+        Support · <a href="mailto:rahilwani8090@gmail.com">rahilwani8090@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

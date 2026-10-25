@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#FF6B6B" />
+  <title>Privacy Policy — HabitFlow</title>
+  <style>
+    :root {
+      --bg: #FFF8F2;
+      --surface: #FFFFFF;
+      --text: #1F1B17;
+      --muted: #6B6963;
+      --primary: #FF6B6B;
+      --secondary: #FFB36B;
+      --tertiary: #24C58F;
+      --border: rgba(0, 0, 0, 0.08);
+      --shadow: rgba(0, 0, 0, 0.07);
+    }
+    body.dark {
+      --bg: #14110F;
+      --surface: #1F1B17;
+      --text: #FAFAFA;
+      --muted: #B5B1AA;
+      --border: rgba(255, 255, 255, 0.10);
+      --shadow: rgba(0, 0, 0, 0.5);
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 0 18px 40px;
+    }
+    .hero {
+      margin: 0 -18px 22px;
+      padding: 32px 24px 26px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 55%, var(--tertiary) 100%);
+      border-radius: 0 0 28px 28px;
+      box-shadow: 0 14px 32px var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 220px; height: 220px;
+      right: -60px; top: -60px;
+      background: radial-gradient(circle, rgba(255,255,255,0.22), transparent 70%);
+      border-radius: 50%;
+    }
+    .hero .eyebrow {
+      font-size: 11px; letter-spacing: 2.5px; font-weight: 800;
+      opacity: 0.95; text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: 28px; margin: 8px 0 4px; font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+    .hero .meta { font-size: 12.5px; opacity: 0.92; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px 18px 14px;
+      margin-bottom: 14px;
+      box-shadow: 0 6px 18px var(--shadow);
+    }
+    .card h2 {
+      font-size: 15px;
+      font-weight: 800;
+      margin: 0 0 8px;
+      letter-spacing: 0.2px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .card h2 .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--tertiary));
+      display: inline-block;
+    }
+    .card p, .card li { color: var(--text); margin: 4px 0; }
+    .card ul { margin: 6px 0 4px; padding-left: 20px; }
+    .card li { margin: 3px 0; }
+    .card .muted { color: var(--muted); font-size: 13px; }
+    .footer {
+      margin-top: 26px;
+      padding: 22px 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 6px 18px var(--shadow);
+    }
+    .footer .by { font-size: 11px; letter-spacing: 2.5px; color: var(--muted); font-weight: 800; }
+    .footer .studio {
+      font-weight: 800; font-size: 20px; letter-spacing: 3px;
+      background: linear-gradient(135deg, var(--primary), var(--tertiary));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      margin: 2px 0 14px;
+    }
+    .footer .label { font-size: 12.5px; color: var(--muted); margin: 0 0 8px; }
+    .email-pill {
+      display: inline-block;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff !important;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 8px 18px var(--shadow);
+      min-height: 44px;
+      line-height: 20px;
+    }
+    .footer .copy { font-size: 12px; color: var(--muted); margin-top: 14px; }
+    a { color: var(--primary); }
+
+    .tag {
+      display: inline-block;
+      padding: 1px 7px;
+      border-radius: 999px;
+      font-size: 10.5px; font-weight: 800; letter-spacing: 0.8px;
+      text-transform: uppercase; vertical-align: 1px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--tertiary));
+    }
+    .card a { overflow-wrap: anywhere; }
+
+    /* Enhanced Mobile Responsiveness */
+    @media (max-width: 480px) {
+      body {
+        font-size: 14.5px;
+      }
+      main {
+        padding: 0 12px 30px;
+      }
+      .hero {
+        margin: 0 -12px 18px;
+        padding: 28px 18px 22px;
+        border-radius: 0 0 24px 24px;
+      }
+      .hero h1 {
+        font-size: 24px;
+      }
+      .card {
+        padding: 16px 16px 12px;
+        border-radius: 16px;
+        margin-bottom: 12px;
+      }
+      .email-pill {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        text-align: center;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="eyebrow">HabitFlow</div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">Last updated · 25 October 2026</div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2><span class="dot"></span>What changed in this update</h2>
+      <ul>
+        <li><span class="tag">New</span> <strong>Health Connect</strong>: habits can now tick themselves off from your steps, distance, workouts, sleep or water.</li>
+        <li><span class="tag">New</span> <strong>Vacation mode, mood insights and monthly/yearly recaps</strong>.</li>
+        <li>The full list of what syncs when you sign in now includes tasks, mood ratings, missed-day reasons, preferences and vacation periods.</li>
+        <li>New sections on usage analytics, crash reports, push notifications for devices that never sign in, what duel opponents can see, and how long we keep each kind of data.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>The short version</h2>
+      <ul>
+        <li>If you don't sign in, your habits, tasks, notes and moods stay on your phone.</li>
+        <li>If you sign in with Google, we store your data in the cloud so you can restore it and sync it across devices.</li>
+        <li>Health Connect data is read and checked against your goal on your phone. It is never uploaded, stored on our servers or shared.</li>
+        <li>The app is free and shows one banner ad on each screen through Google AdMob. <strong>We never sell your data.</strong></li>
+        <li>We use Firebase for push notifications, a few anonymous usage events and crash reports.</li>
+        <li>You can delete your account and all of your cloud data from Settings at any time.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Two ways to use HabitFlow</h2>
+      <p><strong>Without signing in.</strong> Your habits, check-ins, tasks, notes, moods and settings stay only on this device. To run, the app still contacts a few services: Google AdMob for the banner ad, Firebase for push notifications, usage events and crash reports, and ZenQuotes for the daily quote. None of these services ever receive your habits, notes, moods or health data.</p>
+      <p><strong>Signed in with Google.</strong> This adds cloud backup, sync across devices and duels with friends. The sections below list exactly what we store and who can see it.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>What stays on your device</h2>
+      <p>The following is kept in a local database on your phone, whether or not you sign in:</p>
+      <ul>
+        <li>Your habits: name, emoji, color, schedule, reminder times, description and any Health Connect link.</li>
+        <li>Check-ins, streaks, badges, streak freezes, missed-day reasons and notes.</li>
+        <li>The mood you pick after a check-in. Mood insights and your monthly and yearly recaps are calculated on the device from this data.</li>
+        <li>Tasks and their subtasks.</li>
+        <li>Vacation-mode periods.</li>
+        <li>Focus-timer sessions and data for the home-screen widget.</li>
+        <li>App settings: theme, accent, text size, haptics, reminder and motivation preferences.</li>
+        <li>Your username and, if you set one, your profile picture.</li>
+        <li>If you sign in, your sign-in session, which is stored encrypted.</li>
+      </ul>
+      <p class="muted">Uninstalling the app removes all of the above from the device.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Health Connect</h2>
+      <p>You can link a habit to a daily goal in Health Connect, such as "10,000 steps" or "8 hours of sleep". Once you reach the goal, HabitFlow ticks the habit off for you.</p>
+      <ul>
+        <li><strong>What we read:</strong> steps, distance, exercise sessions, sleep sessions and hydration. We read only the types you link to a habit, and only after you grant access in Health Connect.</li>
+        <li><strong>When:</strong> while the app is open. If you also allow background access, HabitFlow checks about once an hour and before a reminder, so you don't get reminded about something you already did.</li>
+        <li><strong>Where it goes:</strong> your health readings are compared with your goal on the phone. They are never uploaded, never stored on our servers and never shared with anyone. If you're signed in, only the link syncs: which kind of data (for example "steps") and your goal number. Your readings never sync.</li>
+        <li><strong>What we never do:</strong> we never write to Health Connect, and we never use health data for ads, analytics, profiling or anything other than completing your linked habits.</li>
+        <li><strong>Your control:</strong> you can unlink a habit at any time, or remove HabitFlow's access in Health Connect's settings.</li>
+      </ul>
+      <p class="muted">HabitFlow's use of information received from Health Connect adheres to the Health Connect Permissions policy, including the Limited Use requirements.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>What we store in the cloud (only if you sign in)</h2>
+      <p>Signing in with Google creates an account linked to your Google user ID. We store the following so you can restore your data on any device where you sign in:</p>
+      <ul>
+        <li><strong>Account profile</strong>: your Google user ID, email address, display name, username, your device's time zone and your profile picture (if you upload one).</li>
+        <li><strong>Habits</strong>: title, emoji, color, schedule, reminder times, description, daily target, order, archived or deleted status, the Health Connect link (data type and goal only), and timestamps.</li>
+        <li><strong>Check-ins</strong>: the date, your local date and time-zone offset, how you checked in (in the app, from the widget or from a notification), and any note or mood you added.</li>
+        <li><strong>Missed-day reasons</strong> and <strong>streak freezes</strong>.</li>
+        <li><strong>Tasks</strong>: title, note, priority, due date and time, subtasks and whether each one is done.</li>
+        <li><strong>Weekly challenges</strong>: your progress on in-app challenges.</li>
+        <li><strong>Preferences</strong>: theme, accent, text size and other settings, whether you've finished onboarding and accepted the terms, and your vacation periods.</li>
+        <li><strong>Duels</strong>: covered in the next section.</li>
+        <li><strong>Push-notification token</strong>: a device token plus the app version, device model, Android version and language, so we can send the notifications you've turned on.</li>
+        <li><strong>Sync records</strong>: when your device last uploaded or downloaded data.</li>
+      </ul>
+      <p class="muted">We never see your Google password, because sign-in goes through Google's own system. Your data is protected by database rules that allow only your account to read or change it.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Duels: what other people can see</h2>
+      <ul>
+        <li>Signed-in users can look you up by username to send you a duel invite. When they do, they see your <strong>username, display name and profile picture</strong>. Other users can never see your email address or time zone.</li>
+        <li>In a duel you join, both players see the habit title, emoji, length and dates, each other's daily check-ins for that duel (including the mood, if you add one) and the result.</li>
+        <li>Profile pictures load from a public link so they appear in your opponent's app. Anyone who has that exact link can open the image.</li>
+        <li>If you share an invite code through WhatsApp or any other app, it goes only to the people you send it to.</li>
+      </ul>
+      <p class="muted">Duels never reveal your other habits, tasks, notes or health data.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Push notifications</h2>
+      <ul>
+        <li><strong>Signed in:</strong> your device token is linked to your account so we can send you notifications such as streak-at-risk alerts, duel invites and duel results.</li>
+        <li><strong>Not signed in:</strong> we still register your device anonymously so we can send occasional announcements to all users. We store the device token, app version, device model, Android version and language. We don't store your name, email or any of your habits. The registration is deleted after 60 days without activity, or moved to your account when you sign in.</li>
+        <li>To prevent abuse, our server records the IP address of each anonymous registration and deletes that record after one day.</li>
+      </ul>
+      <p class="muted">You can turn notifications off at any time in Android Settings.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Analytics &amp; crash reports</h2>
+      <ul>
+        <li><strong>Firebase Analytics</strong> records a few usage events, such as finishing onboarding (with the starter template you picked), creating your first habit and checking in. Each event comes with a random app-instance ID and basic device information: model, Android version, language and approximate country. These events never include your habit names, notes, moods or health data. We have turned off advertising-ID collection for analytics.</li>
+        <li><strong>Firebase Crashlytics</strong> sends us a report if the app crashes. A report contains the error trace, device model, Android version, app version and a random installation ID. Crash reports are not linked to your account.</li>
+      </ul>
+      <p class="muted">We use these only to fix bugs and understand which features people use.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Ads</h2>
+      <p>HabitFlow stays free by showing one banner ad below the header of each tab, through Google AdMob. We don't show video or full-screen ads.</p>
+      <ul>
+        <li>AdMob may collect your device's advertising ID, IP address and device and app information to show, measure and personalize ads and to prevent fraud.</li>
+        <li>In the EEA, the UK and Switzerland, Google's consent form asks for your permission before showing personalized ads. You can change your answer any time in <em>Settings → Ad privacy choices</em>.</li>
+        <li>In any country, you can reset or delete your advertising ID in Android Settings under <em>Privacy → Ads</em> (on some phones, <em>Google → Ads</em>).</li>
+        <li>We never share your habits, tasks, notes, moods or health data with advertisers.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Third-party services we use</h2>
+      <ul>
+        <li><strong>Supabase</strong> runs our cloud database, sign-in sessions and profile-picture storage, for signed-in users. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy policy</a></li>
+        <li><strong>Google Sign-In</strong> handles the optional account creation. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy policy</a></li>
+        <li><strong>Firebase</strong> (Cloud Messaging, Analytics and Crashlytics) handles push notifications, usage events and crash reports. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy information</a></li>
+        <li><strong>Google AdMob</strong> and Google's consent tool serve the banner ads and the consent form. <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses data for ads</a></li>
+        <li><strong>Health Connect</strong> is Android's own health-data hub. HabitFlow reads it on the device, and nothing from it reaches us.</li>
+        <li><strong>ZenQuotes</strong> provides the daily quote. The app sends a simple request to fetch it, with no personal data. <a href="https://zenquotes.io/" target="_blank" rel="noopener">zenquotes.io</a></li>
+        <li><strong>WhatsApp</strong> is used only if you choose to share a duel invite through it.</li>
+      </ul>
+      <p class="muted">Your data may be processed in countries other than your own. Each provider protects it under its own terms and privacy policy.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>How we use &amp; share data</h2>
+      <ul>
+        <li>We use it to run the app's features (sync, reminders, duels, Health Connect auto-complete), keep the service secure, fix crashes, understand which features people use, and show the ads that keep HabitFlow free.</li>
+        <li><strong>We don't sell your personal data.</strong> We share it only with the service providers listed above, or when the law requires it.</li>
+        <li>Streak cards and recap images are made on your phone. They go only where you choose to send them.</li>
+      </ul>
+      <p class="muted">For users in the EEA and UK, our legal bases are: providing the service you asked for (account, sync, duels), your consent (personalized ads, Health Connect, notifications), our legitimate interests (security, crash reports, basic usage stats), and legal obligations.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Local backups</h2>
+      <p>"Save backup" creates a JSON file and saves it wherever you choose. It never goes to our servers. The file contains your habits and notes, so keep it somewhere safe.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Security</h2>
+      <ul>
+        <li>All network traffic is encrypted with HTTPS.</li>
+        <li>Database rules allow each account to read and change only its own data. Other users can see only the duel information described above.</li>
+        <li>Your sign-in session is stored encrypted on your device.</li>
+      </ul>
+      <p class="muted">No system is perfectly secure. If you find a problem, please email us.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>How long we keep data</h2>
+      <ul>
+        <li><strong>Synced account data:</strong> kept for as long as your account exists, and deleted immediately when you delete your account. Copies in our provider's backups are gone within 30 days.</li>
+        <li><strong>Anonymous push registrations:</strong> deleted after 60 days without activity.</li>
+        <li><strong>IP records used for abuse prevention:</strong> deleted after one day.</li>
+        <li><strong>Crash reports:</strong> kept for up to 90 days. <strong>Analytics events:</strong> kept for up to 14 months.</li>
+        <li><strong>Data on your device:</strong> kept until you delete it or uninstall the app.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Your rights &amp; controls</h2>
+      <ul>
+        <li><strong>Sign out</strong> at any time from Settings. The app keeps your data on the device and stops syncing.</li>
+        <li><strong>Delete your account</strong> in <em>Settings → Account → Delete account</em>. This permanently erases your profile, all synced data and your profile picture from the cloud, then clears the app on that device. You can also <a href="delete.html">request deletion by email</a>.</li>
+        <li><strong>Export</strong> your data at any time with "Save backup".</li>
+        <li><strong>Change what you've allowed</strong>: ad choices in Settings, Health Connect access in Health Connect, and notifications in Android Settings.</li>
+        <li>Depending on where you live, you may have the right to <strong>access, correct, delete or receive a copy</strong> of your data, to object to how we process it, or to withdraw consent. Email us and we'll reply within 30 days. In the EEA or UK, you can also complain to your local data protection authority.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Permissions</h2>
+      <ul>
+        <li><strong>Notifications</strong>: show reminders and push notifications.</li>
+        <li><strong>Exact alarms</strong>: make habit reminders fire on time.</li>
+        <li><strong>Full-screen alerts</strong>: let an alarm-style reminder ring and appear over the lock screen.</li>
+        <li><strong>Vibration</strong>: vibrate for reminders and alarms.</li>
+        <li><strong>Live notifications</strong>: show a running focus timer in the status bar and on the lock screen.</li>
+        <li><strong>Run at startup</strong>: keep reminders scheduled after your phone restarts.</li>
+        <li><strong>Internet and network status</strong>: used for sync, sign-in, ads, push notifications and the daily quote, and to wait for a connection before syncing.</li>
+        <li><strong>Health Connect</strong> (steps, distance, exercise, sleep, hydration and background access): requested only when you link a habit to a health goal.</li>
+        <li><strong>Advertising ID</strong>: used by Google AdMob, as described in the Ads section.</li>
+        <li><strong>Installed-app check</strong>: the app checks only whether WhatsApp and Health Connect are installed, to show the share button and set up health links.</li>
+      </ul>
+      <p class="muted">You can revoke any of these in Android Settings.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Children</h2>
+      <p>HabitFlow is not meant for children under 13, or under the age of digital consent where you live. We don't knowingly collect data from children. If you think a child has given us data, email us and we'll delete it.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Changes to this policy</h2>
+      <p>When we change this policy, we'll update the date at the top. If a change is significant, we'll also let you know in the app.</p>
+    </div>
+
+    <div class="footer">
+      <div class="by">DEVELOPED BY</div>
+      <div class="studio">SDX STUDIO</div>
+      <p class="label">Questions? Email us:</p>
+      <a class="email-pill" href="mailto:rahilwani8090@gmail.com?subject=HabitFlow%20Privacy">rahilwani8090@gmail.com</a>
+      <div class="copy">© 2026 SDX STUDIO · Stay in the flow.</div>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var qs = new URLSearchParams(window.location.search);
+      var pref = qs.get('theme');
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (pref === 'dark' || (pref !== 'light' && systemDark)) {
+        document.body.classList.add('dark');
+      }
+    })();
+  </script>
+</body>
+</html>
